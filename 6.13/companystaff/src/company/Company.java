@@ -23,7 +23,9 @@ public class Company {
     }
 
     public boolean fire(Employee employee) {
-        if (!staff.contains(employee)) return false;
+        if (!staff.contains(employee)) {
+            return false;
+        }
         else {
             staff.remove(employee);
             return true;
@@ -81,6 +83,6 @@ public class Company {
     }
 
     public Employee getRandomEmployee() {
-        return staff.get((int)Math.random() * staff.size());
+        return staff.get((int)Math.floor(Math.random() * staff.size()));
     }
 }

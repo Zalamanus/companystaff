@@ -29,9 +29,11 @@ public class Main {
             System.out.printf("%d. %,.0f руб.%n", i + 1 , tempList.get(i).getMonthSalary());
         }
 
-        for (int i = 0; i < firstCompany.getStaff().size()/2 ; i++) {
+        int staffCount = firstCompany.getStaff().size();
+        for (int i = 0; i < staffCount / 2 ; i++) {
             firstCompany.fire(firstCompany.getRandomEmployee());
         }
+
 
         System.out.println("В компании " + firstCompany.getCompanyName() + " " + firstCompany.getStaff().size() + " сотрудников.");
         System.out.println("Самые высокие зарплаты после увольнения половины сотрудников");
